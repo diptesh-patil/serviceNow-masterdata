@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>colors</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>rajkumar</sys_created_by>
+        <sys_created_on>2021-03-26 10:05:15</sys_created_on>
+        <sys_id>c597c3ba2f832010b3352aa62799b6d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>colors</sys_name>
+        <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+        <sys_update_name>sys_ui_policy_action_c597c3ba2f832010b3352aa62799b6d4</sys_update_name>
+        <sys_updated_by>rajkumar</sys_updated_by>
+        <sys_updated_on>2021-03-26 10:05:15</sys_updated_on>
+        <table>x_77927_master_dat_printer_consumables</table>
+        <ui_policy display_value="Enable Color field at Printer Consumables table">c3b68b7a2f832010b3352aa62799b647</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>

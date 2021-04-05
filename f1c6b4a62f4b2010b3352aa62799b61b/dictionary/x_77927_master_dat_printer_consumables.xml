@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Printer Consumables" max_length="40" name="x_77927_master_dat_printer_consumables" sizeclass="114" type="collection">
+        <element label="Colors" max_length="4000" name="colors" type="glide_list"/>
+        <element label="Consumable Id" max_length="40" name="consumable_id" type="integer"/>
+        <element display="true" label="Consumable Name" max_length="80" name="consumable_name" type="string"/>
+        <element choice="1" label="Consumable Type" max_length="40" name="consumable_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Toner Cartridge" value="1"/>
+                <element inactive_on_update="false" label="Ink Cartridge" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="Printhead" sequence="3" value="3"/>
+                <element inactive_on_update="false" label="Drum Kit" sequence="4" value="4"/>
+                <element inactive_on_update="false" label="Transfer Kit" sequence="5" value="5"/>
+                <element inactive_on_update="false" label="Fuser Kit" sequence="6" value="6"/>
+                <element inactive_on_update="false" label="Maintenance Kit" sequence="7" value="7"/>
+                <element inactive_on_update="false" label="Cleaning Kit" sequence="8" value="8"/>
+                <element inactive_on_update="false" label="Document Feeder Kit" sequence="9" value="9"/>
+                <element inactive_on_update="false" label="Roller Kit" sequence="10" value="10"/>
+                <element inactive_on_update="false" label="Pen Wipe" sequence="11" value="11"/>
+                <element inactive_on_update="false" label="Waste Collector" sequence="12" value="12"/>
+                <element inactive_on_update="false" label="Staple Cartridge" sequence="13" value="13"/>
+                <element inactive_on_update="false" label="Imaging Unit" sequence="14" value="14"/>
+                <element inactive_on_update="false" label="Developer" sequence="15" value="15"/>
+                <element inactive_on_update="false" label="Filter" sequence="16" value="16"/>
+                <element inactive_on_update="false" label="Pickup Roller ADF" sequence="18" value="18"/>
+                <element inactive_on_update="false" label="Separation Revrse Roller ADF" sequence="19" value="19"/>
+                <element inactive_on_update="false" label="Paper Transfer Belt" sequence="22" value="22"/>
+                <element inactive_on_update="false" label="Tray Roller" sequence="23" value="23"/>
+                <element inactive_on_update="false" label="Heated Pressure Roller" sequence="24" value="24"/>
+                <element inactive_on_update="false" label="UNKNOWN" sequence="999" value="999"/>
+            </choice>
+        </element>
+    </element>
+</database>

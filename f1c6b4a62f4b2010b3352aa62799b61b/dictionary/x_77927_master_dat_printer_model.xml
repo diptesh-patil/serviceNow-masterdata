@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_model" label="Printer Models" max_length="40" name="x_77927_master_dat_printer_model" sizeclass="2" type="collection">
+        <element label="Product Id" mandatory="true" max_length="40" name="product_id" type="integer"/>
+        <element label="SAP Model Number" max_length="80" name="sap_model_number" type="string"/>
+    </element>
+</database>

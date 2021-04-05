@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="technology_type" label="Technology Type" language="en" table="x_77927_master_dat_printer_types">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>technology_type</element>
+            <help/>
+            <hint/>
+            <label>Technology Type</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_types</name>
+            <plural>Technology Types</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 10:31:24</sys_created_on>
+            <sys_id>e8cd8ffe2f832010b3352aa62799b66b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Technology Type</sys_name>
+            <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+            <sys_update_name>sys_documentation_x_77927_master_dat_printer_types_technology_type_en</sys_update_name>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 10:31:24</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

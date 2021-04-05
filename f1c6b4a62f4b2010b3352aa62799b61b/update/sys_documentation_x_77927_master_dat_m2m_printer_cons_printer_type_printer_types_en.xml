@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="printer_types" label="Printer Types" language="en" table="x_77927_master_dat_m2m_printer_cons_printer_type">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>printer_types</element>
+            <help/>
+            <hint/>
+            <label>Printer Types</label>
+            <language>en</language>
+            <name>x_77927_master_dat_m2m_printer_cons_printer_type</name>
+            <plural>Printer Types</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 11:03:03</sys_created_on>
+            <sys_id>580597762fc32010b3352aa62799b669</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Printer Types</sys_name>
+            <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+            <sys_update_name>sys_documentation_x_77927_master_dat_m2m_printer_cons_printer_type_printer_types_en</sys_update_name>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 11:03:03</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

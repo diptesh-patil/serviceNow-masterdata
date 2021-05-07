@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="cmdb_model" label="Printer Supplies" max_length="40" name="x_77927_master_dat_printer_supplies" sizeclass="2" type="collection">
+    <element extends="cmdb_model" label="Printer Supplies" max_length="40" name="x_77927_master_dat_printer_supplies" sizeclass="19" type="collection">
         <element label="SAP Model Number" max_length="80" name="sap_model_number" type="string"/>
         <element label="Supply Id" max_length="40" name="supply_id" type="integer"/>
         <element label="Yield" max_length="40" name="yield" type="integer"/>

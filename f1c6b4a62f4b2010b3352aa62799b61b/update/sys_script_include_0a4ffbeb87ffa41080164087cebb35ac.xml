@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_77927_master_dat.mdsCommonGET</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>GET Function to call mds Tables data.</description>
+        <name>mdsCommonGET</name>
+        <script><![CDATA[var mdsCommonGET = Class.create();
+mdsCommonGET.prototype = {
+    initialize: function() {},
+
+    getPrinterType: function(columnName, columnValue) {
+        var mds = {
+            deviceType: [],
+            prmIDs: []
+        };
+        var gPrinter = new GlideRecord('x_77927_master_dat_printer_types');
+        gPrinter.addQuery(columnName, columnValue);
+        gPrinter.query();
+        if (gPrinter.getRowCount() > 0) {
+            while (gPrinter.next()) {
+                var c = {
+                    "manufacturer": {},
+                    "collectProtocol": {},
+                    "technologyType": {},
+                    "printCapabilityType": {}
+                };
+				
+                c.id = gPrinter.printer_type_id.getDisplayValue();
+                c.name = gPrinter.name.toString();
+				c.manufacturer = "id="+gPrinter.manufacturer.toString()+" name="+gPrinter.manufacturer.getDisplayValue();
+                //c.manufacturer.Id = gPrinter.manufacturer.toString();
+                //c.manufacturer.Name = gPrinter.manufacturer.getDisplayValue();
+                c.collectProtocol.id = gPrinter.collect_protocol_type.toString();
+                c.collectProtocol.name = gPrinter.collect_protocol_type.getDisplayValue();
+                c.technologyType.id = gPrinter.technology_type.toString();
+                c.technologyType.Name = gPrinter.technology_type.getDisplayValue();
+                c.printCapabilityType.id = gPrinter.print_capability_type.toString();
+                c.printCapabilityType.Name = gPrinter.print_capability_type.getDisplayValue();
+                c.dataSource = "ITSM";
+                c.dateCreated = gPrinter.sys_created_on.toString();
+                c.lastUpdated = gPrinter.sys_updated_on.toString();
+                mds.deviceType.push(c);
+                mds.prmIDs.push(gPrinter.sys_id.toString());
+            }
+        }
+        return mds;
+    },
+
+    getPrinterType_Consumable: function(columnName, columnValue) {
+        var mds = {
+            pConsumableIDs: [],
+            consumable: []
+        };
+        var gPrinterConsumable = new GlideRecord('x_77927_master_dat_m2m_printer_cons_printer_type');
+        gPrinterConsumable.addQuery(columnName, columnValue);
+        gPrinterConsumable.query();
+        if (gPrinterConsumable.getRowCount() > 0) {
+            while (gPrinterConsumable.next()) {
+                var pc = {
+                    "consumable": {consumableType:{}, colors: {color: {}}}};
+
+                pc.consumable.id = gPrinterConsumable.printer_consumables.consumable_id.toString();
+                pc.consumable.name = gPrinterConsumable.printer_consumables.getDisplayValue();
+                pc.consumable.consumableType.Id = gPrinterConsumable.printer_consumables.consumable_type.toString();
+                pc.consumable.consumableType.Name = gPrinterConsumable.printer_consumables.consumable_type.getDisplayValue();
+                pc.consumable.colors.color.id = gPrinterConsumable.printer_consumables.colors.toString();
+                pc.consumable.colors.color.name = gPrinterConsumable.printer_consumables.colors.getDisplayValue();
+                pc.consumable.colors.color.order = gPrinterConsumable.printer_consumables.colors.getDisplayValue();
+                pc.consumable.fulfillmentNeedSourceId = "";
+                pc.consumable.consumableOrderTypeId = "";
+                pc.consumable.monoEquivalentForColor = "";
+                pc.consumable.suppressionPrintTotal = "";
+                pc.consumable.dataSource = "ITSM";
+                pc.consumable.dateCreated = gPrinterConsumable.sys_created_on.toString();
+                pc.consumable.lastUpdated = gPrinterConsumable.sys_updated_on.toString();
+
+                mds.consumable.push(pc.consumable);
+                mds.pConsumableIDs.push(gPrinterConsumable.printer_consumables.toString());
+            }
+        }
+        return mds;
+    },
+
+    getConsumable_Supply: function(columnName, columnValue) {
+        var mds = {
+            pSupplyIDs: []
+        };
+        var gConsumableSupplies = new GlideAggregate('x_77927_master_dat_m2m_printer_supp_printer_cons');
+        gConsumableSupplies.addQuery(columnName + columnValue);
+        gConsumableSupplies.addAggregate('COUNT', 'printer_supplies');
+        gConsumableSupplies.groupBy('printer_supplies');
+        gConsumableSupplies.query();
+
+        if (gConsumableSupplies.getRowCount() > 0) {
+            while (gConsumableSupplies.next()) {
+                mds.pSupplyIDs.push(gConsumableSupplies.printer_supplies.toString());
+            }
+        }
+        return mds;
+    },
+
+    getSupply_Model: function(columnName, columnValue) {
+        var mds = {
+            pModelIDs: []
+        };
+        var gSuppliesModel = new GlideAggregate('x_77927_master_dat_m2m_printer_supp_printer_mode');
+        gSuppliesModel.addQuery(columnName + columnValue);
+        gSuppliesModel.addAggregate('COUNT', 'printer_models');
+        gSuppliesModel.groupBy('printer_models');
+        gSuppliesModel.query();
+
+        if (gSuppliesModel.getRowCount() > 0) {
+            while (gSuppliesModel.next()) {
+                mds.pModelIDs.push(gSuppliesModel.printer_models.product_id.toString());
+            }
+        }
+        return mds;
+    },
+
+    getPrinterModel_Supply: function(columnName, columnValue) {
+		var mds = {"product": {compatibleSupplies: []}};
+
+        var gSupplyModel = new GlideAggregate('x_77927_master_dat_m2m_printer_supp_printer_mode');
+        gSupplyModel.addQuery(columnName, columnValue);
+        gSupplyModel.addAggregate('COUNT', 'printer_models');
+        gSupplyModel.groupBy('printer_models');
+        gSupplyModel.query();
+
+        if (gSupplyModel.getRowCount() > 0) {
+            while (gSupplyModel.next()) {
+                mds.product.id = gSupplyModel.printer_models.product_id.toString();
+                mds.product.manufacturerProductNumber = gSupplyModel.printer_models.model_number.toString();
+                mds.product.sapProductNumber = gSupplyModel.printer_models.sap_model_number.toString();
+                mds.product.productModelName = gSupplyModel.printer_models.name.getDisplayValue();
+                mds.product.dataSource = "ITSM";
+                mds.product.dateCreated = gSupplyModel.printer_models.sys_created_on.toString();
+                mds.product.lastUpdated = gSupplyModel.printer_models.sys_updated_on.toString();
+
+                //Supplies
+                var gModelSupply = new GlideAggregate('x_77927_master_dat_m2m_printer_supp_printer_mode');
+                gModelSupply.addQuery('printer_modelsIN' + gSupplyModel.printer_models.toString());		
+                gModelSupply.addAggregate('COUNT', 'printer_supplies');
+                gModelSupply.groupBy('printer_supplies');
+                gModelSupply.query();
+						
+                var m = {
+                    compatibleSupply: []
+                };
+                if (gModelSupply.getRowCount() > 0) {
+                    while (gModelSupply.next()) {
+                        var c = {consumableIds:{}};
+                        c.id = gModelSupply.printer_supplies.supply_id.toString();
+                        c.manufacturerPartNumber = gModelSupply.printer_supplies.model_number.getDisplayValue();
+                        c.sapPartNumber = gModelSupply.printer_supplies.sap_model_number.getDisplayValue();
+                        c.supplyDescription = gModelSupply.printer_supplies.name.getDisplayValue();
+                        c.dataSource = "ITSM";
+                        c.dateCreated = gModelSupply.printer_supplies.sys_created_on.toString();
+                        c.lastUpdated = gModelSupply.printer_supplies.sys_updated_on.toString();
+                        m.compatibleSupply.push(c);
+						
+						
+						//ConIDs
+						var cm = {consumableIds:[]};
+						var gSupplyConsumableIDs = new GlideAggregate('x_77927_master_dat_m2m_printer_supp_printer_cons');
+						gSupplyConsumableIDs.addQuery('printer_supplies' , gModelSupply.printer_supplies.toString());
+						gSupplyConsumableIDs.addAggregate('COUNT', 'printer_consumables');
+						gSupplyConsumableIDs.groupBy('printer_consumables');
+						gSupplyConsumableIDs.query();
+						
+						if (gSupplyConsumableIDs.getRowCount() > 0) {
+						while (gSupplyConsumableIDs.next()) {
+							var ci ={consumableIds:{}};
+							ci.consumableIds.consumableId=gSupplyConsumableIDs.printer_consumables.consumable_id.toString();
+							cm.consumableIds.push(ci.consumableIds.consumableId);
+						}
+						}
+						c.consumableIds = cm; 					
+                    }
+                }
+				
+                mds.product.compatibleSupplies.push(m);
+            }
+        }
+        return mds;
+    },
+
+	
+    type: 'mdsCommonGET'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-05 04:52:37</sys_created_on>
+        <sys_id>0a4ffbeb87ffa41080164087cebb35ac</sys_id>
+        <sys_mod_count>96</sys_mod_count>
+        <sys_name>mdsCommonGET</sys_name>
+        <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+        <sys_update_name>sys_script_include_0a4ffbeb87ffa41080164087cebb35ac</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-06 08:55:14</sys_updated_on>
+    </sys_script_include>
+</record_update>

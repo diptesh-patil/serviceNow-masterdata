@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="dPrinterModel_Supply" language="en" table="x_77927_master_dat_dprintermodel_supply">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>dPrinterModel_Supply</label>
+            <language>en</language>
+            <name>x_77927_master_dat_dprintermodel_supply</name>
+            <plural>dPrinterModel_Supplies</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-03 04:02:11</sys_created_on>
+            <sys_id>6d11e58387f3641080164087cebb35de</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>dPrinterModel_Supply</sys_name>
+            <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+            <sys_update_name>sys_documentation_x_77927_master_dat_dprintermodel_supply__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-03 04:02:11</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

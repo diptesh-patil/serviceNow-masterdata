@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="dPrinterSupply" max_length="40" name="x_77927_master_dat_dprintersupply" sizeclass="19" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Display name" label="Display name" max_length="61" name="u_display_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Manufacturer" label="Manufacturer" max_length="40" name="u_manufacturer" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Model number" label="Model number" max_length="40" name="u_model_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Name" label="Name" max_length="45" name="u_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=SAP Model Number" label="SAP Model Number" max_length="40" name="u_sap_model_number" type="string"/>
+        <element attributes="import_attribute_name=Supply Id" label="Supply Id" max_length="40" name="u_supply_id" type="integer"/>
+        <element attributes="import_attribute_name=Yield" label="Yield" max_length="40" name="u_yield" type="integer"/>
+        <element attributes="import_attribute_name=Yield Measure" label="Yield Measure" max_length="40" name="u_yield_measure" type="integer"/>
+    </element>
+</database>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>GetDeviceType</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var reqP1 = request.pathParams;
+    var deviceId = reqP1.deviceId;
+    var body = {};
+	var mds = {
+		deviceType : {
+			"id" : 0, "name" : ""
+			,manufacturer : {"id":0 , "name":""}
+			,collectProtocol: {"id":0, "name":""}
+			,technologyType :{"id":0 , "name":""}
+			,printCapabilityType:{"id":0, "name":""}
+			,"dataSource" : "ITSM"
+			,"dateCreated": ""
+			,"lastUpdated": ""
+		},
+		consumables : [],
+		products : []
+	};
+	
+		
+   var gPrinter = new GlideRecord('x_77927_master_dat_printer_types');
+   gPrinter.addQuery('printer_type_id', deviceId);
+   gPrinter.query();
+   if (gPrinter.next()) {
+		mds.deviceType.id = gPrinter.printer_type_id.toString();
+		mds.deviceType.name = gPrinter.name.toString();
+	    mds.deviceType.manufacturer.id = gPrinter.manufacturer.toString();
+	    mds.deviceType.manufacturer.name = gPrinter.manufacturer.getDisplayValue();
+	    mds.deviceType.collectProtocol.id = gPrinter.collect_protocol_type.toString();
+	    mds.deviceType.collectProtocol.name = gPrinter.collect_protocol_type.getDisplayValue();
+	    mds.deviceType.technologyType.id = gPrinter.technology_type.toString();
+	    mds.deviceType.technologyType.name = gPrinter.technology_type.getDisplayValue();
+	    mds.deviceType.printCapabilityType.id = gPrinter.print_capability_type.toString();
+	    mds.deviceType.printCapabilityType.name = gPrinter.print_capability_type.getDisplayValue();
+	    mds.deviceType.dateCreated = gPrinter.sys_created_on.toString();
+		mds.deviceType.lastUpdated = gPrinter.sys_updated_on.toString();
+	   
+			var gconsumables = new GlideRecord('x_77927_master_dat_m2m_printer_cons_printer_type');
+			var vprintertype = gPrinter.sys_id.toString();
+			gconsumables.addQuery('printer_types', vprintertype);
+		    gconsumables.query();
+	   
+		    while (gconsumables.next()) {
+				var cons = {
+							"id":0, "name":""
+							,consumableType : {"cid":0, "cname":"", "sid":0, "sname":""}
+							,colors : {"id":0, "name":"", "order":0}
+							,"fulfillmentNeedSourceId":""
+							,"consumableOrderTypeId":""
+							,"monoEquivalentForColor":""
+							,"suppressionPrintTotal":""
+							,"dataSource" : "ITSM"
+							,"dateCreated": ""
+							,"lastUpdated": ""
+							};
+			    cons.id = gconsumables.printer_consumables.consumable_id.toString();
+			    cons.name = gconsumables.printer_consumables.getDisplayValue();
+				cons.dateCreated = gconsumables.sys_created_on.toString();
+				cons.lastUpdated = gconsumables.sys_updated_on.toString();
+			    mds.consumables.push(cons);
+				
+				var gconsumablestype = new GlideRecord('x_77927_master_dat_printer_consumables');
+				var vctId = gconsumables.printer_consumables.toString();
+				gconsumablestype.addQuery('sys_id', vctId);
+				gconsumablestype.query();
+				while (gconsumablestype.next()) {
+					 cons.consumableType.cid = gconsumablestype.consumable_type.toString();
+					 cons.consumableType.cname = gconsumablestype.consumable_type.getDisplayValue();
+					 //mds.consumables.push(cons.consumableType);
+					
+					var gconsupply = new GlideRecord('x_77927_master_dat_m2m_printer_supp_printer_cons');
+					var vcsId = gconsumables.sys_id.toString();
+				gconsupply.addQuery('printer_consumables', vctId);
+				gconsupply.query();
+				while (gconsupply.next()) {
+					cons.consumableType.sid = gconsupply.printer_supplies.supply_id.toString();
+					 cons.consumableType.sname = gconsupply.printer_supplies.getDisplayValue();
+					 mds.consumables.push(cons.consumableType);
+					
+					
+					//
+					var gsupplymod = new GlideRecord('x_77927_master_dat_m2m_printer_supp_printer_mode');
+					var vsmId = gconsupply.printer_supplies.toString();
+				gsupplymod.addQuery('printer_supplies', vsmId);
+				gsupplymod.query();
+				while (gsupplymod.next()) {
+					var mod ={"pid":0,"pname":""};
+					 mod.pid = gsupplymod.printer_models.product_id.toString();
+					mod.pname = gsupplymod.printer_models.getDisplayValue();
+					 mds.products.push(mod);
+				}
+				}
+							
+				 }
+				//supply
+				var gsup = new GlideRecord('x_77927_master_dat_printer_supplies');
+				var vspId = gconsupply.printer_supplies.toString();
+				gsup.addQuery('sys_id', vspId);
+				gsup.query();
+				while (gsup.next()) {
+					var sup ={"spid":0,"spname":"","sapname":"","sppartnum":""};
+					 sup.spid = gsup.supply_id.toString();
+					sup.spname = gsup.name.getDisplayValue();
+					sup.sapname = gsup.sap_model_number.getDisplayValue();
+					sup.sppartnum = gsup.model_number.getDisplayValue();
+					 mds.products.push(sup);
+				}
+				
+						
+					//model
+				var gmod = new GlideRecord('x_77927_master_dat_printer_model');
+				var vmi = gsupplymod.printer_models.toString();
+				gmod.addQuery('sys_id', vmi);
+				gmod.query();
+				while (gmod.next()) {
+					var md ={"msapn":"","mdnm":"","pnm":""};
+					md.msapn = gmod.sap_model_number.toString();
+					md.mdnm = gmod.name.getDisplayValue();
+					md.pnm = gmod.model_number.getDisplayValue();
+					mds.products.push(md);
+				}	
+				
+			   }
+		   
+			
+   }	
+    /*
+    while (gPrinter.next()) {
+    	body.d = "deviceType id= " + gPrinter.printer_type_id.toString() + " name=" + gPrinter.name.toString();
+    	body.m = "manufacturer id= " + gPrinter.manufacturer + " name=" + gPrinter.manufacturer.getDisplayValue();
+    	body.c = "collectprotocol id= " + gPrinter.collect_protocol_type+ " name=" +  gPrinter.collect_protocol_type.getDisplayValue();
+    }
+    */
+	
+	response.setBody(mds);
+	
+	/*
+	var mds_root= response;
+    var deviceMasterData = {};
+
+    deviceMasterData.deviceType  = {
+		'id': '1744',
+        'name': 'HP PAGEWIDE COLOR MFP P77940',
+		manufacturer :
+		{
+		'id': '1',
+        'name': 'Hewlett Packard'
+		},
+       collectProtocol :
+		{
+		'id': '3',
+        'name': 'Ws'
+		}
+    };
+	deviceMasterData.consumables = {
+		'id': '201',
+        'name': 'Cyan Ink Cartridge',
+		colors :
+		{
+		'id': '1',
+        'name': 'Cyan'
+		},
+	};
+	return deviceMasterData;
+	*/
+  
+
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_77927_master_dat/printertype_api/{deviceId}</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/{deviceId}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-20 15:37:57</sys_created_on>
+        <sys_id>bcc20dcf1b2fa010f240ff37dc4bcb41</sys_id>
+        <sys_mod_count>167</sys_mod_count>
+        <sys_name>GetDeviceType</sys_name>
+        <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+        <sys_update_name>sys_ws_operation_bcc20dcf1b2fa010f240ff37dc4bcb41</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-29 08:22:11</sys_updated_on>
+        <web_service_definition display_value="PrinterType API">585285cf1b2fa010f240ff37dc4bcb79</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

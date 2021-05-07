@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="System Import Sets">import_sets</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>ds_mds_product_to_printer_data</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_77927_master_dat_im_mds_product_to_printer_data</name>
+        <order>1100</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-20 11:23:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d559480b1baba010f240ff37dc4bcbd4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ds_mds_product_to_printer_data</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+        <sys_update_name>sys_app_module_d559480b1baba010f240ff37dc4bcbd4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-20 11:23:04</sys_updated_on>
+        <timeline_page/>
+        <title>ds_mds_product_to_printer_data</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</application>
+        <file_path/>
+        <instance_id>30f27bb3db88fb4042b321c4059619fe</instance_id>
+        <instance_name>dev75002</instance_name>
+        <name>sys_app_module_d559480b1baba010f240ff37dc4bcbd4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="System Import Sets">import_sets</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>ds_mds_product_to_printer_data</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_77927_master_dat_im_mds_product_to_printer_data</name><order>1100</order><override_menu_roles>false</override_menu_roles><query/><report/><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-04-20 11:23:04</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>d559480b1baba010f240ff37dc4bcbd4</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ds_mds_product_to_printer_data</sys_name><sys_overrides/><sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package><sys_policy/><sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope><sys_update_name>sys_app_module_d559480b1baba010f240ff37dc4bcbd4</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-04-20 11:23:04</sys_updated_on><timeline_page/><title>ds_mds_product_to_printer_data</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>1133738041</payload_hash>
+        <record_name>ds_mds_product_to_printer_data</record_name>
+        <reverted_from/>
+        <source>7df48c071baba010f240ff37dc4bcbe4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-20 11:23:04</sys_created_on>
+        <sys_id>5559480b1baba010f240ff37dc4bcbd6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>178ef04fa900000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-20 11:23:04</sys_updated_on>
+        <type>Module</type>
+        <update_guid>9d59480bf0aba01095c3e3d8c7df63d5</update_guid>
+        <update_guid_history>9d59480bf0aba01095c3e3d8c7df63d5:1133738041</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="ds_mds_product_to_printer_data">ab226dc387f3641080164087cebb35f4</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-03 04:06:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>7570782c8f9f48a2b1458ccd733ecf64</sys_id>
+        <sys_metadata>d559480b1baba010f240ff37dc4bcbd4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ds_mds_product_to_printer_data</sys_name>
+        <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+        <sys_scope_delete display_value="">b0ca5c9e7b984121ae2ce920920d8fc1</sys_scope_delete>
+        <sys_update_name>sys_app_module_d559480b1baba010f240ff37dc4bcbd4</sys_update_name>
+        <sys_update_version display_value="sys_app_module_d559480b1baba010f240ff37dc4bcbd4">5559480b1baba010f240ff37dc4bcbd6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-03 04:06:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

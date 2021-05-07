@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>GetDeviceMasterData</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var queryParams = request.queryParams;
+	var printerId = queryParams.PrinterID;
+	var gmdsCommonGET = new mdsCommonGET();
+	
+		
+	var m = {deviceMasterData: {deviceType:[], consumables:{consumable:[]}, products:{product:[]}}};
+	//-----PrinterType
+	var gPrinterType = gmdsCommonGET.getPrinterType('printer_type_id',printerId);
+	m.deviceMasterData.deviceType.push(gPrinterType.deviceType);
+	
+	//-----Get PrinterType-Consumable Data
+	var gPrinterType_Consumable = gmdsCommonGET.getPrinterType_Consumable('printer_types',gPrinterType.prmIDs[0]);
+	m.deviceMasterData.consumables.consumable.push(gPrinterType_Consumable.consumable);
+	
+	//-----Get Consumable-SupplyIDs Data
+	var gConsumable_Supply = gmdsCommonGET.getConsumable_Supply('printer_consumablesIN', gPrinterType_Consumable.pConsumableIDs);
+	//-----Get Supply-ModelIDs Data
+	var gSupply_Model = gmdsCommonGET.getSupply_Model('printer_suppliesIN', gConsumable_Supply.pSupplyIDs);
+	
+	var a=[];
+	for (var i = 0; i < gSupply_Model.pModelIDs.length; i++) {
+		var gPrinterModel_Supply = gmdsCommonGET.getPrinterModel_Supply('printer_models.product_id', gSupply_Model.pModelIDs[i]);
+		a.push(gPrinterModel_Supply.product);
+	}
+	m.deviceMasterData.products.product.push(a);
+
+
+	response.setBody(m);
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_77927_master_dat/devicemasterdata</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-05 04:47:32</sys_created_on>
+        <sys_id>7b4e77eb87ffa41080164087cebb355a</sys_id>
+        <sys_mod_count>68</sys_mod_count>
+        <sys_name>GetDeviceMasterData</sys_name>
+        <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+        <sys_update_name>sys_ws_operation_7b4e77eb87ffa41080164087cebb355a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-06 07:23:45</sys_updated_on>
+        <web_service_definition display_value="DeviceMasterData">f16db7eb87ffa41080164087cebb35ef</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

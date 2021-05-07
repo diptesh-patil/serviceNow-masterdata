@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="DELETE">
+        <choice_action>ignore</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="u_imp_tmpl_x_77927_master_dat_printer_consumables">e75c1afa2f032010b3352aa62799b673</map>
+        <reference_value_field/>
+        <source_field>u_consumable_type</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+
+	// Add your code here
+	return ""; // return the value to be put into the target field
+
+})(source);]]></source_script>
+        <source_table>u_imp_tmpl_x_77927_master_dat_printer_consumables</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>rajkumar</sys_created_by>
+        <sys_created_on>2021-03-26 06:55:36</sys_created_on>
+        <sys_id>2b5c1afa2f032010b3352aa62799b6d2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>u_consumable_type</sys_name>
+        <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+        <sys_update_name>sys_transform_entry_2b5c1afa2f032010b3352aa62799b6d2</sys_update_name>
+        <sys_updated_by>rajkumar</sys_updated_by>
+        <sys_updated_on>2021-03-26 06:55:36</sys_updated_on>
+        <target_field>consumable_type</target_field>
+        <target_table>x_77927_master_dat_printer_consumables</target_table>
+        <use_source_script>false</use_source_script>
+    </sys_transform_entry>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</application>
+        <file_path/>
+        <instance_id>30f27bb3db88fb4042b321c4059619fe</instance_id>
+        <instance_name>dev75002</instance_name>
+        <name>sys_transform_entry_2b5c1afa2f032010b3352aa62799b6d2</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_entry"&gt;
+    &lt;sys_transform_entry action="INSERT_OR_UPDATE"&gt;
+        &lt;choice_action&gt;ignore&lt;/choice_action&gt;
+        &lt;coalesce&gt;false&lt;/coalesce&gt;
+        &lt;coalesce_case_sensitive&gt;false&lt;/coalesce_case_sensitive&gt;
+        &lt;coalesce_empty_fields&gt;false&lt;/coalesce_empty_fields&gt;
+        &lt;date_format&gt;yyyy-MM-dd HH:mm:ss&lt;/date_format&gt;
+        &lt;map display_value="u_imp_tmpl_x_77927_master_dat_printer_consumables"&gt;e75c1afa2f032010b3352aa62799b673&lt;/map&gt;
+        &lt;reference_value_field/&gt;
+        &lt;source_field&gt;u_consumable_type&lt;/source_field&gt;
+        &lt;source_script&gt;&lt;![CDATA[answer = (function transformEntry(source) {
+
+	// Add your code here
+	return ""; // return the value to be put into the target field
+
+})(source);]]&gt;&lt;/source_script&gt;
+        &lt;source_table&gt;u_imp_tmpl_x_77927_master_dat_printer_consumables&lt;/source_table&gt;
+        &lt;sys_class_name&gt;sys_transform_entry&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;rajkumar&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2021-03-26 06:55:36&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;2b5c1afa2f032010b3352aa62799b6d2&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;u_consumable_type&lt;/sys_name&gt;
+        &lt;sys_package display_value="Master Data Service" source="x_77927_master_dat"&gt;f1c6b4a62f4b2010b3352aa62799b61b&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Master Data Service"&gt;f1c6b4a62f4b2010b3352aa62799b61b&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_transform_entry_2b5c1afa2f032010b3352aa62799b6d2&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;rajkumar&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2021-03-26 06:55:36&lt;/sys_updated_on&gt;
+        &lt;target_field&gt;consumable_type&lt;/target_field&gt;
+        &lt;target_table&gt;x_77927_master_dat_printer_consumables&lt;/target_table&gt;
+        &lt;use_source_script&gt;false&lt;/use_source_script&gt;
+    &lt;/sys_transform_entry&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>411240930</payload_hash>
+        <record_name>u_consumable_type</record_name>
+        <reverted_from/>
+        <source>3660222d1b6f2010f240ff37dc4bcb1d</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-16 06:32:28</sys_created_on>
+        <sys_id>a570262d1b6f2010f240ff37dc4bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>178d9617f7d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-16 06:32:28</sys_updated_on>
+        <type>Field Map</type>
+        <update_guid>6570262d0f6f2010c7ab99347d7e6e06</update_guid>
+        <update_guid_history>6570262d0f6f2010c7ab99347d7e6e06:411240930</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-27 15:14:58</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_entry">sys_transform_entry</sys_db_object>
+        <sys_id>89be2389f50b4f97ab4031667d230f81</sys_id>
+        <sys_metadata>2b5c1afa2f032010b3352aa62799b6d2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_consumable_type</sys_name>
+        <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+        <sys_scope_delete display_value="">b0ca5c9e7b984121ae2ce920920d8fc1</sys_scope_delete>
+        <sys_update_name>sys_transform_entry_2b5c1afa2f032010b3352aa62799b6d2</sys_update_name>
+        <sys_update_version display_value="sys_transform_entry_2b5c1afa2f032010b3352aa62799b6d2">a570262d1b6f2010f240ff37dc4bcb06</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-27 15:14:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="dPrinterSupply_Consumable" max_length="40" name="x_77927_master_dat_dprintersupply_consumable" sizeclass="32" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Printer Consumables" label="Printer Consumables" max_length="40" name="u_printer_consumables" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Printer Supplies" label="Printer Supplies" max_length="61" name="u_printer_supplies" type="string"/>
+    </element>
+</database>

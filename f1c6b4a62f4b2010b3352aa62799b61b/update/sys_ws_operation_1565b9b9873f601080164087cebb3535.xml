@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>GetPrinterType</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	
+	//var queryParams = request.queryParams;
+	//var printerId = queryParams.PrinterID;
+    var reqPath = request.pathParams;
+	var printerTypeId = reqPath.PrinterTypeID;
+	var gmdsCommonGET = new mdsCommonGET_Dev();
+	var MDS = {deviceMasterData: {deviceType:[], consumables:[], products:{product:[]}}};
+	var IDs ={ID:[]};
+	var m =[];
+
+	var gPrinterType = gmdsCommonGET.getDeviceMasterData('printer_type_id',printerTypeId);
+	m.push(gPrinterType);
+	
+	response.setBody(m);
+	
+	/*
+	var gPrinterType1 = gmdsCommonGET.getAggPrinterType_Consumable('printer_type_id',printerTypeId);
+	m.push(gPrinterType1);
+
+	var gPrinterModel_Supply = gmdsCommonGET.getPrinterModel_Supply('printer_type_id',printerTypeId);
+	m.push(gPrinterModel_Supply.products);
+	response.setBody(m);
+*/
+	
+	//Get PrinterType Data
+	//var gPrinterType = gmdsCommonGET.getPrinterType('printer_type_id',printerTypeId);
+	//m.push(gPrinterType);
+	//var xmlString = '<deviceType id="1774" name="HP PAGEWIDE COLOR MFP P77940">' + '<manufacturer id="1" name="Hewlett Packard"/>	<collectProtocol id="3" name="Ws"/>'+ '<technologyType id="102" name="Ink"/> <printCapabilityType id="3" name="MultiColorMode"/> ' + '	<dataSource>RM</dataSource>' + '</deviceType>';
+// 	<dateCreated>2018-11-08 17:10:44.557</dateCreated>
+// 	<lastUpdated>2018-11-08 17:10:44.557</lastUpdated>
+//var xml = parseXML(xmlString);
+//response.setBody(xmlString);
+	//return xmlString;
+	
+	
+	//Get PrinterType-Consumable Data
+	//var gPrinterType_Consumable = gmdsCommonGET.getPrinterType_Consumable('printer_type_id',gPrinterType.prmIDs[0]);
+	//MDS.deviceMasterData.consumables.push(gPrinterType_Consumable.consumable);
+	//response.setBody(MDS);
+	
+	//Get SupplyIDs From Consumable
+	//for (var i = 0; i < gPrinterType_Consumable.prmIDs.length; i++) {
+	//var gConsumableSupply = gmdsCommonGET.getConsumable_Supply('printer_consumables',gPrinterType_Consumable.prmIDs[i]);
+	//	if(gConsumableSupply.prmIDs[0]){
+	//	IDs.ID.push(gConsumableSupply.prmIDs[0]);
+	//	}
+	//}
+
+	//var gSupplyModel = gmdsCommonGET.getSupply_Model('printer_suppliesIN',IDs.ID);
+	//MDS.deviceMasterData.products.product.push(gSupplyModel.product);
+
+	//Return Result
+	//response.setBody(MDS);
+
+	
+	
+	/*
+	notes:
+	gs.info(JSON.stringify(gPrinterType));
+	gs.info(JSON.stringify(gPrinterType.deviceType[0].id));
+	gPrinterType_Consumable.prm ="";
+	
+	for (var i = 0; i < gPrinterType_Consumable.prm.length; i++) {}
+	
+	----remove duplicate from array
+	var a =[1,1,2,3,3,4,5]
+	var b = new global.ArrayUtil();
+	a=b.unique(a);
+	gs.info(a);
+	*/
+	
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_77927_master_dat/printertype_api/{PrinterTypeID}</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/{PrinterTypeID}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-29 08:22:18</sys_created_on>
+        <sys_id>1565b9b9873f601080164087cebb3535</sys_id>
+        <sys_mod_count>269</sys_mod_count>
+        <sys_name>GetPrinterType</sys_name>
+        <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+        <sys_update_name>sys_ws_operation_1565b9b9873f601080164087cebb3535</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-07 03:59:42</sys_updated_on>
+        <web_service_definition display_value="PrinterType API">585285cf1b2fa010f240ff37dc4bcb79</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

@@ -6,46 +6,20 @@
         <default_operation_uri/>
         <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
         <http_method>GET</http_method>
-        <name>Get DeviceType</name>
+        <name>Get Device Type</name>
         <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
 	// implement resource here
-	var requestContext = request.getHeader('accept');
-	if(requestContext == 'application/xml' || !requestContext){
-		var payload = new XMLDocument2();
-		payload.createElement("deviceMasterData");
-		_addParameter(payload, 'deviceType', '1', 'HP COLOR LASERJET 3550');
-		_addParameter(payload, 'manufacturer', '1', 'Hewlett Packard');
-		_addParameter(payload, 'collectProtocol', '1', 'Snmp');
+	var payload = new XMLDocument2();
+	payload.createElement("deviceMasterData");
+	_addParameter(payload, 'deviceType', '1', 'HP COLOR LASERJET 3550');
+	_addParameter(payload, 'manufacturer', '1', 'Hewlett Packard');
+	_addParameter(payload, 'collectProtocol', '1', 'Snmp');
 
-		response.setContentType('application/xml');
-		var writer=response.getStreamWriter();
-		writer.writeString(payload);
-	}
-	else if(requestContext == 'application/json'){
-		var jsonBody = {
-			'deviceMasterData' : [
-				{
-					'deviceType' : {
-						'id' : '1',
-						'name' : 'HP COLOR LASERJET 3550'
-					},
-					'manufacturer' : {
-						'id' : '1',
-						'name' : 'Hewlett Packard'
-					},
-					'collectProtocol' : {
-						'id' : '1',
-						'name' : 'Snmp'
-					}
-				}
-			]
-		};
+	response.setContentType('application/xml');
+	var writer=response.getStreamWriter();
+	writer.writeString(payload);
 
-		response.setContentType('application/JSON');
-		var writer1 = response.getStreamWriter();
-		writer1.writeString(JSON.stringify(jsonBody));
-	}
 })(request, response);
 function _addParameter(payload, elemnetName, id, name) {
 	if(elemnetName)
@@ -56,10 +30,10 @@ function _addParameter(payload, elemnetName, id, name) {
 		el.setAttribute("name", name);
 	return el;
 }]]></operation_script>
-        <operation_uri>/api/x_24137_master_dat/master_data_management/deviceType</operation_uri>
+        <operation_uri>/api/x_24137_master_dat/master_data_management/testing</operation_uri>
         <produces>application/json,application/xml,text/xml</produces>
         <produces_customized>false</produces_customized>
-        <relative_path>/deviceType</relative_path>
+        <relative_path>/testing</relative_path>
         <request_example/>
         <requires_acl_authorization>true</requires_acl_authorization>
         <requires_authentication>true</requires_authentication>
@@ -67,16 +41,16 @@ function _addParameter(payload, elemnetName, id, name) {
         <short_description/>
         <sys_class_name>sys_ws_operation</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-05-20 01:43:10</sys_created_on>
-        <sys_id>6a24e8281b54b010971631d7dc4bcbd6</sys_id>
-        <sys_mod_count>25</sys_mod_count>
-        <sys_name>Get DeviceType</sys_name>
+        <sys_created_on>2021-05-20 10:41:43</sys_created_on>
+        <sys_id>d70f52e01bd8b010971631d7dc4bcb94</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Get Device Type</sys_name>
         <sys_package display_value="Master Data Management" source="x_24137_master_dat">0b93a4281b90b010971631d7dc4bcbe7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Master Data Management">0b93a4281b90b010971631d7dc4bcbe7</sys_scope>
-        <sys_update_name>sys_ws_operation_6a24e8281b54b010971631d7dc4bcbd6</sys_update_name>
+        <sys_update_name>sys_ws_operation_d70f52e01bd8b010971631d7dc4bcb94</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-05-21 06:15:45</sys_updated_on>
+        <sys_updated_on>2021-05-20 11:05:21</sys_updated_on>
         <web_service_definition display_value="Master Data Management">9c14a8281b54b010971631d7dc4bcb79</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

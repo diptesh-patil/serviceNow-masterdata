@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_24137_master_dat_customer_account" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>first_namef</element>
+            <list_id display_value="x_24137_master_dat_customer_account" element="NULL" name="x_24137_master_dat_customer_account" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b464fd241b58b010971631d7dc4bcb9a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-20 07:33:05</sys_created_on>
+            <sys_id>7064fd241b58b010971631d7dc4bcb9b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-20 07:33:05</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>last_name</element>
+            <list_id display_value="x_24137_master_dat_customer_account" element="NULL" name="x_24137_master_dat_customer_account" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b464fd241b58b010971631d7dc4bcb9a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-20 07:33:05</sys_created_on>
+            <sys_id>f064fd241b58b010971631d7dc4bcb9b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-20 07:33:05</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_24137_master_dat_customer_account</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-20 07:33:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b464fd241b58b010971631d7dc4bcb9a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_24137_master_dat_customer_account</sys_name>
+            <sys_package display_value="Master Data Management" source="x_24137_master_dat">0b93a4281b90b010971631d7dc4bcbe7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Master Data Management">0b93a4281b90b010971631d7dc4bcbe7</sys_scope>
+            <sys_update_name>sys_ui_list_x_24137_master_dat_customer_account_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-20 07:33:05</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

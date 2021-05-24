@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="first_namef" label="First Name" language="en" table="x_24137_master_dat_customer_account">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>first_namef</element>
+            <help/>
+            <hint/>
+            <label>First Name</label>
+            <language>en</language>
+            <name>x_24137_master_dat_customer_account</name>
+            <plural>First Names</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-20 07:26:40</sys_created_on>
+            <sys_id>36e231241b58b010971631d7dc4bcbea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>First Name</sys_name>
+            <sys_package display_value="Master Data Management" source="x_24137_master_dat">0b93a4281b90b010971631d7dc4bcbe7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Master Data Management">0b93a4281b90b010971631d7dc4bcbe7</sys_scope>
+            <sys_update_name>sys_documentation_x_24137_master_dat_customer_account_first_namef_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-20 07:26:40</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

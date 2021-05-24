@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Printer Type Consumable Relationships" max_length="40" name="x_77927_master_dat_m2m_printer_cons_printer_type" sizeclass="0" type="collection">
+    <element label="Printer Type Consumable Relationships" max_length="40" name="x_77927_master_dat_m2m_printer_cons_printer_type" type="collection">
+        <element choice="1" label="Consumable Order Type ID" max_length="40" name="consumable_order_type_id" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Supply" sequence="1" value="101"/>
+                <element inactive_on_update="false" label="Longlife Consumable" sequence="2" value="201"/>
+                <element inactive_on_update="false" label="Preventive Maintenance" sequence="3" value="301"/>
+            </choice>
+        </element>
+        <element choice="1" label="Fulfillment Need Source ID" max_length="40" name="fulfillment_need_source_id" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="0" sequence="1" value="0"/>
+                <element inactive_on_update="false" label="1" sequence="2" value="1"/>
+                <element inactive_on_update="false" label="2" sequence="3" value="2"/>
+                <element inactive_on_update="false" label="999" sequence="4" value="999"/>
+            </choice>
+        </element>
+        <element choice="1" label="Mono Equivalent For Color" max_length="40" name="mono_equivalent_for_color" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="0" sequence="1" value="0"/>
+                <element inactive_on_update="false" label="1" sequence="2" value="1"/>
+                <element inactive_on_update="false" label="2" sequence="3" value="2"/>
+            </choice>
+        </element>
         <element attributes="encode_utf8=false" label="Printer Consumables" max_length="32" name="printer_consumables" reference="x_77927_master_dat_printer_consumables" type="reference"/>
         <element attributes="encode_utf8=false" label="Printer Types" max_length="32" name="printer_types" reference="x_77927_master_dat_printer_types" type="reference"/>
+        <element choice="1" label="Suppression Print Total" max_length="40" name="suppression_print_total" type="integer">
+            <choice/>
+        </element>
         <index name="index">
             <element name="printer_types"/>
         </index>

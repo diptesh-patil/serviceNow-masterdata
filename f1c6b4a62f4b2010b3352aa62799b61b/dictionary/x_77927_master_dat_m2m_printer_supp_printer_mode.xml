@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Model Supply Relationships" max_length="40" name="x_77927_master_dat_m2m_printer_supp_printer_mode" sizeclass="0" type="collection">
+    <element label="Model Supply Relationships" max_length="40" name="x_77927_master_dat_m2m_printer_supp_printer_mode" type="collection">
         <element attributes="encode_utf8=false" label="Printer Models" max_length="32" name="printer_models" reference="x_77927_master_dat_printer_model" type="reference"/>
         <element attributes="encode_utf8=false" label="Printer Supplies" max_length="32" name="printer_supplies" reference="x_77927_master_dat_printer_supplies" type="reference"/>
         <index name="index">

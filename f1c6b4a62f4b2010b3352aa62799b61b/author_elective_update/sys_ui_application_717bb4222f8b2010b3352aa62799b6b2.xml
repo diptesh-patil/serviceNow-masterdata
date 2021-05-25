@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application">
+    <sys_ui_application action="DELETE">
+        <active>true</active>
+        <hint/>
+        <name>Printer_Model</name>
+        <order/>
+        <roles>x_77927_master_dat.printer_model_user</roles>
+        <sys_class_name>sys_ui_application</sys_class_name>
+        <sys_created_by>rajkumar</sys_created_by>
+        <sys_created_on>2021-03-25 05:13:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>717bb4222f8b2010b3352aa62799b6b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Printer_Model</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+        <sys_update_name>sys_ui_application_717bb4222f8b2010b3352aa62799b6b2</sys_update_name>
+        <sys_updated_by>rajkumar</sys_updated_by>
+        <sys_updated_on>2021-03-25 05:13:45</sys_updated_on>
+    </sys_ui_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</application>
+        <file_path/>
+        <instance_id>93b4bc61db128c10387021c4059619e1</instance_id>
+        <instance_name>dev96707</instance_name>
+        <name>sys_ui_application_717bb4222f8b2010b3352aa62799b6b2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application"><sys_ui_application action="INSERT_OR_UPDATE"><active>true</active><hint/><name>Printer_Model</name><order/><roles>x_77927_master_dat.printer_model_user</roles><sys_class_name>sys_ui_application</sys_class_name><sys_created_by>rajkumar</sys_created_by><sys_created_on>2021-03-25 05:13:45</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>717bb4222f8b2010b3352aa62799b6b2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Printer_Model</sys_name><sys_overrides/><sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package><sys_policy/><sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope><sys_update_name>sys_ui_application_717bb4222f8b2010b3352aa62799b6b2</sys_update_name><sys_updated_by>rajkumar</sys_updated_by><sys_updated_on>2021-03-25 05:13:45</sys_updated_on></sys_ui_application></record_update>]]></payload>
+        <payload_hash>1601671643</payload_hash>
+        <record_name>Printer_Model</record_name>
+        <reverted_from/>
+        <source>75c6b4a62f4b2010b3352aa62799b61d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajkumar</sys_created_by>
+        <sys_created_on>2021-03-25 05:13:45</sys_created_on>
+        <sys_id>f97bb4222f8b2010b3352aa62799b6b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17867cd846e0000001</sys_recorded_at>
+        <sys_updated_by>rajkumar</sys_updated_by>
+        <sys_updated_on>2021-03-25 05:13:45</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>357bb422488b2010b1cca5c3bc827fb4</update_guid>
+        <update_guid_history>357bb422488b2010b1cca5c3bc827fb4:1601671643</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajkumar</sys_created_by>
+        <sys_created_on>2021-03-25 06:06:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_application">sys_ui_application</sys_db_object>
+        <sys_id>087d248f651c4038b7648bc38682de40</sys_id>
+        <sys_metadata>717bb4222f8b2010b3352aa62799b6b2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Printer_Model</sys_name>
+        <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+        <sys_scope_delete display_value="">b0ca5c9e7b984121ae2ce920920d8fc1</sys_scope_delete>
+        <sys_update_name>sys_ui_application_717bb4222f8b2010b3352aa62799b6b2</sys_update_name>
+        <sys_update_version display_value="sys_ui_application_717bb4222f8b2010b3352aa62799b6b2">f97bb4222f8b2010b3352aa62799b6b4</sys_update_version>
+        <sys_updated_by>rajkumar</sys_updated_by>
+        <sys_updated_on>2021-03-25 06:06:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

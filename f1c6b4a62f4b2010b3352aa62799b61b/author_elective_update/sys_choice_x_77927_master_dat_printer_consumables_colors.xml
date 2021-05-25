@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="colors" table="x_77927_master_dat_printer_consumables" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>colors</element>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 09:20:17</sys_created_on>
+            <sys_id>c77dba722f832010b3352aa62799b631</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>colors</sys_name>
+            <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+            <sys_update_name>sys_choice_x_77927_master_dat_printer_consumables_colors</sys_update_name>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 09:20:17</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cyan</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 09:20:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e36d32b22f832010b3352aa62799b6c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 09:20:17</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Magenta</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 09:20:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d88d7a722f832010b3352aa62799b6af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 09:20:32</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Black</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:05:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>898d7ef92f90301069b243e72799b6c0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:05:29</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Yellow</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:05:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>38bd7ef92f90301069b243e72799b62b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:05:58</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Light Cyan</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:06:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>56cd7ef92f90301069b243e72799b648</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:06:20</sys_updated_on>
+            <value>5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Light Magenta</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:07:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>560e323d2f90301069b243e72799b657</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:07:25</sys_updated_on>
+            <value>6</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Bonding Agent</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:07:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>761e32792f90301069b243e72799b606</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:07:47</sys_updated_on>
+            <value>7</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Red</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:08:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d13e3ef92f90301069b243e72799b6b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:08:14</sys_updated_on>
+            <value>8</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Green</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:08:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>de4e363d2f90301069b243e72799b6db</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:08:34</sys_updated_on>
+            <value>9</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Blue</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:08:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7c6efeb92f90301069b243e72799b61a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:08:59</sys_updated_on>
+            <value>10</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Gray</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>11</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:09:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>597e7ef92f90301069b243e72799b634</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:09:19</sys_updated_on>
+            <value>11</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Gloss Enhancer</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>12</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:09:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>378e7ef92f90301069b243e72799b6cb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:09:42</sys_updated_on>
+            <value>12</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Light Gray</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>13</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:10:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>58aef23d2f90301069b243e72799b6ee</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:10:03</sys_updated_on>
+            <value>13</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Photo Gray</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>14</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:10:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2ebe3a3d2f90301069b243e72799b62e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:10:24</sys_updated_on>
+            <value>14</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Photo Black</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>15</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:10:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d2ce3a3d2f90301069b243e72799b664</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:10:41</sys_updated_on>
+            <value>15</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Orange</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>16</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:11:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>32de3a3d2f90301069b243e72799b6f0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:11:02</sys_updated_on>
+            <value>16</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Dark Gray</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>17</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:11:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6feef23d2f90301069b243e72799b6f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:11:20</sys_updated_on>
+            <value>17</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Matte Black</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>18</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:11:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f30ff27d2f90301069b243e72799b652</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:11:55</sys_updated_on>
+            <value>18</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Violet</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>19</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:12:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7c2fb67d2f90301069b243e72799b617</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:12:16</sys_updated_on>
+            <value>19</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Tri-Color</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>20</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:12:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>aa3f727d2f90301069b243e72799b6b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:12:39</sys_updated_on>
+            <value>20</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>NA</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>21</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:13:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3f4f327d2f90301069b243e72799b649</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:13:03</sys_updated_on>
+            <value>21</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4-Color</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>22</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:13:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9d6ff63d2f90301069b243e72799b6fa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:13:20</sys_updated_on>
+            <value>22</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>White</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>23</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:13:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1d7f327d2f90301069b243e72799b64c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:13:37</sys_updated_on>
+            <value>23</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>colors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>UNKNOWN</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>24</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 10:14:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>298f763d2f90301069b243e72799b6aa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 10:14:01</sys_updated_on>
+            <value>24</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

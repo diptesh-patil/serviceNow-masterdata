@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="consumable_type" table="x_77927_master_dat_printer_consumables" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>consumable_type</element>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-25 10:33:01</sys_created_on>
+            <sys_id>a68446662f4f2010b3352aa62799b6b3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>consumable_type</sys_name>
+            <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+            <sys_update_name>sys_choice_x_77927_master_dat_printer_consumables_consumable_type</sys_update_name>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-25 10:33:01</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Toner Cartridge</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-25 10:33:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6e8446662f4f2010b3352aa62799b6b2</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:33:16</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Ink Cartridge</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:34:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7c67daf62f032010b3352aa62799b626</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:34:11</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Printhead</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:34:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>23779eb62f032010b3352aa62799b60f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:34:30</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Drum Kit</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:34:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>219796f62f032010b3352aa62799b6e7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:34:54</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Transfer Kit</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:38:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4278daf62f032010b3352aa62799b6e9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:38:49</sys_updated_on>
+            <value>5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Fuser Kit</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:39:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8f881ef62f032010b3352aa62799b6b1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:39:11</sys_updated_on>
+            <value>6</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Maintenance Kit</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:39:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7ca81a3a2f032010b3352aa62799b6dd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:39:47</sys_updated_on>
+            <value>7</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cleaning Kit</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:40:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5dc81a3a2f032010b3352aa62799b6e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:40:08</sys_updated_on>
+            <value>8</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Document Feeder Kit</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:40:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>03d8def62f032010b3352aa62799b651</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:40:33</sys_updated_on>
+            <value>9</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Roller Kit</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:40:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f9f89a3a2f032010b3352aa62799b67a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:40:57</sys_updated_on>
+            <value>10</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pen Wipe</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>11</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:41:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8309def62f032010b3352aa62799b6e5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:41:19</sys_updated_on>
+            <value>11</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Waste Collector</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>12</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:41:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1429da3a2f032010b3352aa62799b687</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:41:38</sys_updated_on>
+            <value>12</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Staple Cartridge</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>13</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:41:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>68391a3a2f032010b3352aa62799b6e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:41:57</sys_updated_on>
+            <value>13</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Imaging Unit</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>14</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:46:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>214a5e7a2f032010b3352aa62799b616</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:46:46</sys_updated_on>
+            <value>14</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Developer</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>15</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:47:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f86ada3a2f032010b3352aa62799b690</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:47:10</sys_updated_on>
+            <value>15</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Filter</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>16</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:47:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>497ade3a2f032010b3352aa62799b6fb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:47:26</sys_updated_on>
+            <value>16</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pickup Roller ADF</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>18</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:47:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>398a1e3a2f032010b3352aa62799b655</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:47:47</sys_updated_on>
+            <value>18</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Separation Revrse Roller ADF</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>19</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:48:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>339a5e7a2f032010b3352aa62799b61c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:48:09</sys_updated_on>
+            <value>19</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Paper Transfer Belt</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>22</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:48:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a7aa16ba2f032010b3352aa62799b6c0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:48:32</sys_updated_on>
+            <value>22</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Tray Roller</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>23</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:48:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>16ca56ba2f032010b3352aa62799b6d2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:48:57</sys_updated_on>
+            <value>23</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Heated Pressure Roller</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>24</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:49:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>49ead6ba2f032010b3352aa62799b63a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:49:20</sys_updated_on>
+            <value>24</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>UNKNOWN</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_consumables</name>
+            <sequence>999</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 06:49:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d6fad6ba2f032010b3352aa62799b6c6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 06:49:43</sys_updated_on>
+            <value>999</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

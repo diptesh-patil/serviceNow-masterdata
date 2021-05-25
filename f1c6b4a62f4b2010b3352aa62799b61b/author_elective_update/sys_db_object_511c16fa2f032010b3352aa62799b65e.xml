@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="DELETE">
+        <access/>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>false</create_access_controls>
+        <delete_access>false</delete_access>
+        <extension_model/>
+        <is_extendable>false</is_extendable>
+        <label>Imp Tmpl X 77927 Master Dat Printer Consumables</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>u_imp_tmpl_x_77927_master_dat_printer_consumables</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>true</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class display_value="Import Set Row" name="sys_import_set_row">657caaa4013120100acb3f11fae2b1f2</super_class>
+        <sys_class_code/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_class_path/>
+        <sys_created_by>rajkumar</sys_created_by>
+        <sys_created_on>2021-03-26 06:54:22</sys_created_on>
+        <sys_id>511c16fa2f032010b3352aa62799b65e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Imp Tmpl X 77927 Master Dat Printer Consumables</sys_name>
+        <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+        <sys_update_name>sys_db_object_511c16fa2f032010b3352aa62799b65e</sys_update_name>
+        <sys_updated_by>rajkumar</sys_updated_by>
+        <sys_updated_on>2021-03-26 06:54:22</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role/>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</application>
+        <file_path/>
+        <instance_id>93b4bc61db128c10387021c4059619e1</instance_id>
+        <instance_name>dev96707</instance_name>
+        <name>sys_db_object_511c16fa2f032010b3352aa62799b65e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object"><sys_db_object action="INSERT_OR_UPDATE"><access/><actions_access>false</actions_access><alter_access>false</alter_access><caller_access/><client_scripts_access>false</client_scripts_access><configuration_access>false</configuration_access><create_access>false</create_access><create_access_controls>false</create_access_controls><delete_access>false</delete_access><extension_model/><is_extendable>false</is_extendable><label>Imp Tmpl X 77927 Master Dat Printer Consumables</label><live_feed_enabled>false</live_feed_enabled><name>u_imp_tmpl_x_77927_master_dat_printer_consumables</name><number_ref/><provider_class/><read_access>true</read_access><scriptable_table>false</scriptable_table><super_class display_value="Import Set Row" name="sys_import_set_row">657caaa4013120100acb3f11fae2b1f2</super_class><sys_class_code/><sys_class_name>sys_db_object</sys_class_name><sys_class_path/><sys_created_by>rajkumar</sys_created_by><sys_created_on>2021-03-26 06:54:22</sys_created_on><sys_id>511c16fa2f032010b3352aa62799b65e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Imp Tmpl X 77927 Master Dat Printer Consumables</sys_name><sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package><sys_policy/><sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope><sys_update_name>sys_db_object_511c16fa2f032010b3352aa62799b65e</sys_update_name><sys_updated_by>rajkumar</sys_updated_by><sys_updated_on>2021-03-26 06:54:22</sys_updated_on><update_access>false</update_access><user_role/><ws_access>true</ws_access></sys_db_object></record_update>]]></payload>
+        <payload_hash>1521773356</payload_hash>
+        <record_name>Imp Tmpl X 77927 Master Dat Printer Consumables</record_name>
+        <reverted_from/>
+        <source>75c6b4a62f4b2010b3352aa62799b61d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajkumar</sys_created_by>
+        <sys_created_on>2021-03-26 06:54:23</sys_created_on>
+        <sys_id>351c16fa2f032010b3352aa62799b6af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1786d5003380000001</sys_recorded_at>
+        <sys_updated_by>rajkumar</sys_updated_by>
+        <sys_updated_on>2021-03-26 06:54:23</sys_updated_on>
+        <type>Table</type>
+        <update_guid>f51c16fa5c032010a0f68711f8c96fa2</update_guid>
+        <update_guid_history>f51c16fa5c032010a0f68711f8c96fa2:1521773356</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajkumar</sys_created_by>
+        <sys_created_on>2021-03-26 11:04:29</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_object">sys_db_object</sys_db_object>
+        <sys_id>51542e806150409d9cd346d00cdda719</sys_id>
+        <sys_metadata>511c16fa2f032010b3352aa62799b65e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Imp Tmpl X 77927 Master Dat Printer Consumables</sys_name>
+        <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+        <sys_scope_delete display_value="">b0ca5c9e7b984121ae2ce920920d8fc1</sys_scope_delete>
+        <sys_update_name>sys_db_object_511c16fa2f032010b3352aa62799b65e</sys_update_name>
+        <sys_update_version display_value="sys_db_object_511c16fa2f032010b3352aa62799b65e">351c16fa2f032010b3352aa62799b6af</sys_update_version>
+        <sys_updated_by>rajkumar</sys_updated_by>
+        <sys_updated_on>2021-03-26 11:04:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

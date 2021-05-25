@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="collect_protocol_type" table="x_77927_master_dat_printer_types" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>collect_protocol_type</element>
+            <name>x_77927_master_dat_printer_types</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 10:41:55</sys_created_on>
+            <sys_id>aa205f322fc32010b3352aa62799b6a7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>collect_protocol_type</sys_name>
+            <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+            <sys_update_name>sys_choice_x_77927_master_dat_printer_types_collect_protocol_type</sys_update_name>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 10:41:55</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>collect_protocol_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Snmp</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_types</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 10:41:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>62205f322fc32010b3352aa62799b6a7</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 10:47:48</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>collect_protocol_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Ledm</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_types</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 10:47:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bc811fb22fc32010b3352aa62799b64a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 10:47:48</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>collect_protocol_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Ws</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_types</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 10:47:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b0811fb22fc32010b3352aa62799b64c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 10:47:48</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>collect_protocol_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>None</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_types</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 10:47:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b4811fb22fc32010b3352aa62799b64d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 10:47:48</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>collect_protocol_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Euroform</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_types</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 10:47:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b8811fb22fc32010b3352aa62799b64e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 10:47:48</sys_updated_on>
+            <value>5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>collect_protocol_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MultiVendor</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_types</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 10:47:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8d811fb22fc32010b3352aa62799b64f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 10:47:48</sys_updated_on>
+            <value>6</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>collect_protocol_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>UNKNOWN</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_types</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-26 10:47:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>81811fb22fc32010b3352aa62799b651</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-26 10:47:48</sys_updated_on>
+            <value>999</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

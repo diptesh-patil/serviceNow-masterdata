@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="sap_model_number" label="SAP Model Number" language="en" table="x_77927_master_dat_printer_supplies">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>sap_model_number</element>
+            <help/>
+            <hint/>
+            <label>SAP Model Number</label>
+            <language>en</language>
+            <name>x_77927_master_dat_printer_supplies</name>
+            <plural>SAP Model Numbers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>rajkumar</sys_created_by>
+            <sys_created_on>2021-03-25 06:17:49</sys_created_on>
+            <sys_id>802a41ea2f8b2010b3352aa62799b6ca</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>SAP Model Number</sys_name>
+            <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+            <sys_update_name>sys_documentation_x_77927_master_dat_printer_supplies_sap_model_number_en</sys_update_name>
+            <sys_updated_by>rajkumar</sys_updated_by>
+            <sys_updated_on>2021-03-25 06:17:49</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

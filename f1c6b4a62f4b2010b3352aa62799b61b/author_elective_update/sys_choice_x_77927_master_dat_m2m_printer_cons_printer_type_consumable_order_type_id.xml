@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="consumable_order_type_id" table="x_77927_master_dat_m2m_printer_cons_printer_type" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>consumable_order_type_id</element>
+            <name>x_77927_master_dat_m2m_printer_cons_printer_type</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 06:28:12</sys_created_on>
+            <sys_id>51ebca792f10301069b243e72799b6ab</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>consumable_order_type_id</sys_name>
+            <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+            <sys_update_name>sys_choice_x_77927_master_dat_m2m_printer_cons_printer_type_consumable_order_type_id</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 06:28:12</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_order_type_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Supply</label>
+            <language>en</language>
+            <name>x_77927_master_dat_m2m_printer_cons_printer_type</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 06:28:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d5ebca792f10301069b243e72799b6aa</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 06:31:47</sys_updated_on>
+            <value>101</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_order_type_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Longlife Consumable</label>
+            <language>en</language>
+            <name>x_77927_master_dat_m2m_printer_cons_printer_type</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 06:29:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>103c8ef52f10301069b243e72799b602</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 06:29:59</sys_updated_on>
+            <value>201</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>consumable_order_type_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Preventive Maintenance</label>
+            <language>en</language>
+            <name>x_77927_master_dat_m2m_printer_cons_printer_type</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-05-24 06:30:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>605c46792f10301069b243e72799b6e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-05-24 06:30:25</sys_updated_on>
+            <value>301</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

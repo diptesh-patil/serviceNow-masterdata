@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_model" label="Printer Types" max_length="40" name="x_77927_master_dat_printer_types" sizeclass="0" type="collection">
+        <element choice="1" label="Collect Protocol Type" mandatory="true" max_length="80" name="collect_protocol_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Snmp" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Ledm" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Ws" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="None" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="Euroform" sequence="4" value="5"/>
+                <element inactive_on_update="false" label="MultiVendor" sequence="5" value="6"/>
+                <element inactive_on_update="false" label="UNKNOWN" sequence="6" value="999"/>
+            </choice>
+        </element>
+        <element label="Printer Type Id" mandatory="true" max_length="40" name="printer_type_id" type="integer"/>
+        <element choice="1" label="Print Capability Type" mandatory="true" max_length="40" name="print_capability_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="None" sequence="0" value="0"/>
+                <element inactive_on_update="false" label="Mono" sequence="1" value="1"/>
+                <element inactive_on_update="false" label="MonoAndColor" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="MultiColorMode" sequence="3" value="3"/>
+            </choice>
+        </element>
+        <element choice="1" label="Technology Type" mandatory="true" max_length="80" name="technology_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Laser" sequence="1" value="101"/>
+                <element inactive_on_update="false" label="Ink" sequence="2" value="102"/>
+                <element inactive_on_update="false" label="Scan" sequence="3" value="103"/>
+                <element inactive_on_update="false" label="Dot Matrix" sequence="4" value="104"/>
+                <element inactive_on_update="false" label="Electrostatic" sequence="5" value="105"/>
+                <element inactive_on_update="false" label="Raster Image Processor" sequence="6" value="106"/>
+                <element inactive_on_update="false" label="Thermal" sequence="7" value="107"/>
+                <element inactive_on_update="false" label="UNKNOWN" sequence="8" value="999"/>
+            </choice>
+        </element>
+    </element>
+</database>

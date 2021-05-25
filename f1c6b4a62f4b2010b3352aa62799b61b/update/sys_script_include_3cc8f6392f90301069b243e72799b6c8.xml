@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_77927_master_dat.DeviceMasterData</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>DeviceMasterData</name>
+        <script><![CDATA[var DeviceMasterData = Class.create();
+DeviceMasterData.prototype = {
+    initialize: function() {
+    },
+	getDeviceMasterDataXML: function(columnName, columnValue){
+		//-----Printer
+		var xmlMDS_Doc = new XMLDocument2();
+		var xMDS = xmlMDS_Doc.createElement('deviceMasterData');
+		var xDeviceType_Node;
+		var gPrinter = new GlideRecord('x_77927_master_dat_printer_types');
+        gPrinter.addQuery('printer_type_id', columnValue);
+        gPrinter.query();	
+		
+		xDeviceType_Node = xmlMDS_Doc.createElement('deviceType');
+		if (gPrinter.next()){
+		xmlMDS_Doc.setCurrentElement(xDeviceType_Node);
+		xDeviceType_Node.setAttribute('id', gPrinter.printer_type_id.getDisplayValue());
+		xDeviceType_Node.setAttribute('name', gPrinter.name.getDisplayValue());
+			
+		xDeviceType_Node = xmlMDS_Doc.createElement('manufacturer');
+		xDeviceType_Node.setAttribute('id', gPrinter.manufacturer.x_77927_master_dat_id.toString());
+		xDeviceType_Node.setAttribute('name', gPrinter.manufacturer.getDisplayValue());	
+		
+		xDeviceType_Node = xmlMDS_Doc.createElement('collectProtocol');
+		xDeviceType_Node.setAttribute('id', gPrinter.collect_protocol_type.toString());
+		xDeviceType_Node.setAttribute('name', gPrinter.collect_protocol_type.getDisplayValue());
+
+		xDeviceType_Node = xmlMDS_Doc.createElement('technologyType');
+		xDeviceType_Node.setAttribute('id', gPrinter.technology_type.toString());
+		xDeviceType_Node.setAttribute('name', gPrinter.technology_type.getDisplayValue());
+
+		xDeviceType_Node = xmlMDS_Doc.createElement('printCapabilityType');
+		xDeviceType_Node.setAttribute('id', gPrinter.print_capability_type.toString());
+		xDeviceType_Node.setAttribute('name', gPrinter.print_capability_type.getDisplayValue());
+	
+		xDeviceType_Node = xmlMDS_Doc.createElementWithTextValue('dataSource', "ITSM");
+		xDeviceType_Node = xmlMDS_Doc.createElementWithTextValue('dateCreated', gPrinter.sys_created_on.toString());
+		xDeviceType_Node = xmlMDS_Doc.createElementWithTextValue('lastUpdated',gPrinter.sys_updated_on.toString());
+			
+		} else {
+			return;
+		}
+		
+		//-----Consumable
+		var pConsumableIDs = [];
+		xmlMDS_Doc.setCurrentElement(xMDS);
+		var xConsumables = xmlMDS_Doc.createElement('consumables');
+		var gAggConsumable = new GlideRecord('x_77927_master_dat_m2m_printer_cons_printer_type');	
+		gAggConsumable.addQuery('printer_types',gPrinter.sys_id.toString());
+		//gAggConsumable.addAggregate('COUNT', 'printer_consumables');
+		//gAggConsumable.groupBy('printer_consumables');
+		gAggConsumable.query();
+		while (gAggConsumable.next()) {
+		xmlMDS_Doc.setCurrentElement(xConsumables);
+		var xConsumable = xmlMDS_Doc.createElement('consumable');
+		xConsumable.setAttribute('id', gAggConsumable.printer_consumables.consumable_id.toString());
+		xConsumable.setAttribute('name', gAggConsumable.printer_consumables.consumable_name.toString());
+		
+		xmlMDS_Doc.setCurrentElement(xConsumable);
+		var xConsumableType = xmlMDS_Doc.createElement("consumableType");
+		xConsumableType.setAttribute('id', gAggConsumable.printer_consumables.consumable_type.toString());
+		xConsumableType.setAttribute('name', gAggConsumable.printer_consumables.consumable_type.getDisplayValue());
+		
+			//Colors
+			var xmlColors = xmlMDS_Doc.createElement('colors');
+			var gchoice = new GlideRecord('sys_choice', 'colors');
+			gchoice.addQuery('name', 'x_77927_master_dat_printer_consumables');
+			gchoice.addQuery('element', 'colors');
+			gchoice.addQuery('value', gAggConsumable.printer_consumables.colors.toString());
+			gchoice.query();
+			while (gchoice.next()) {
+			xmlMDS_Doc.setCurrentElement(xmlColors);
+			var xmlColor = xmlMDS_Doc.createElement("color");
+			xmlColor.setAttribute('id', gchoice.value);
+			xmlColor.setAttribute('name', gchoice.label);
+			xmlColor.setAttribute('order', gchoice.sequence);
+			}
+		
+		xmlMDS_Doc.setCurrentElement(xConsumable);
+		xConsumable = xmlMDS_Doc.createElementWithTextValue('fulfillmentNeedSourceId', gAggConsumable.fulfillment_need_source_id.getDisplayValue());
+        xConsumable = xmlMDS_Doc.createElementWithTextValue('consumableOrderTypeId', gAggConsumable.consumable_order_type_id.toString());
+        xConsumable = xmlMDS_Doc.createElementWithTextValue('monoEquivalentForColor', gAggConsumable.mono_equivalent_for_color.getDisplayValue());
+        xConsumable = xmlMDS_Doc.createElementWithTextValue('suppressionPrintTotal', gAggConsumable.suppression_print_total.getDisplayValue());
+		xConsumable = xmlMDS_Doc.createElementWithTextValue('dataSource', "ITSM");
+		xConsumable = xmlMDS_Doc.createElementWithTextValue('dateCreated', gAggConsumable.printer_consumables.sys_created_on.toString());
+		xConsumable = xmlMDS_Doc.createElementWithTextValue('lastUpdated',gAggConsumable.printer_consumables.sys_updated_on.toString());
+		pConsumableIDs.push(gAggConsumable.printer_consumables.toString());	
+		}
+		
+		
+		//-----Consumables_SuppliesIDs
+		var pSuppliesIDs = [];
+		var gAggConsumableSupply = new GlideAggregate('x_77927_master_dat_m2m_printer_supp_printer_cons');	
+		gAggConsumableSupply.addQuery('printer_consumablesIN'+ pConsumableIDs);
+		gAggConsumableSupply.addAggregate('COUNT', 'printer_supplies');
+		gAggConsumableSupply.groupBy('printer_supplies');
+		gAggConsumableSupply.query();
+		while (gAggConsumableSupply.next()) {
+		pSuppliesIDs.push(gAggConsumableSupply.printer_supplies.toString());	
+		}
+		
+		//Supplies_Models
+		xmlMDS_Doc.setCurrentElement(xMDS);
+		var xProducts = xmlMDS_Doc.createElement('products');
+		var gAggModel = new GlideAggregate('x_77927_master_dat_m2m_printer_supp_printer_mode');	
+		gAggModel.addQuery('printer_suppliesIN'+ pSuppliesIDs);
+		gAggModel.addAggregate('COUNT', 'printer_models');
+		gAggModel.groupBy('printer_models');
+		gAggModel.query();
+		while (gAggModel.next()) {
+		xmlMDS_Doc.setCurrentElement(xProducts);
+		var xProduct = xmlMDS_Doc.createElement('product');
+		xProduct.setAttribute('id', gAggModel.printer_models.product_id.toString());	
+		xmlMDS_Doc.setCurrentElement(xProduct);
+		xProduct = xmlMDS_Doc.createElementWithTextValue('manufacturerProductNumber',gAggModel.printer_models.model_number.toString());
+		xProduct = xmlMDS_Doc.createElementWithTextValue('sapProductNumber',gAggModel.printer_models.sap_model_number.toString());
+		xProduct = xmlMDS_Doc.createElementWithTextValue('productModelName',gAggModel.printer_models.name.toString());
+		xProduct = xmlMDS_Doc.createElementWithTextValue('dataSource', "ITSM");
+		xProduct = xmlMDS_Doc.createElementWithTextValue('dateCreated', gAggModel.printer_models.sys_created_on.toString());
+		xProduct = xmlMDS_Doc.createElementWithTextValue('lastUpdated',gAggModel.printer_models.sys_updated_on.toString());
+			
+			var gAggSupply = new GlideAggregate('x_77927_master_dat_m2m_printer_supp_printer_mode');	
+			gAggSupply.addQuery('printer_models', gAggModel.printer_models.toString());
+			gAggSupply.addAggregate('COUNT', 'printer_supplies');
+			gAggSupply.groupBy('printer_supplies');
+			gAggSupply.query();
+			var xCompatibleSupplies = xmlMDS_Doc.createElement("compatibleSupplies");
+			while (gAggSupply.next()) {
+			xmlMDS_Doc.setCurrentElement(xCompatibleSupplies);
+			var xCompatibleSupply = xmlMDS_Doc.createElement('compatibleSupply');
+			xCompatibleSupply.setAttribute('id', gAggSupply.printer_supplies.supply_id.toString());
+			
+			xmlMDS_Doc.setCurrentElement(xCompatibleSupply);
+			xCompatibleSupply = xmlMDS_Doc.createElementWithTextValue('manufacturerPartNumber',gAggSupply.printer_supplies.model_number.toString());
+			xCompatibleSupply = xmlMDS_Doc.createElementWithTextValue('sapPartNumber',gAggSupply.printer_supplies.sap_model_number.toString());	
+			xCompatibleSupply = xmlMDS_Doc.createElementWithTextValue('supplyDescription',gAggSupply.printer_supplies.name.toString());	
+			xCompatibleSupply = xmlMDS_Doc.createElementWithTextValue('dataSource', "ITSM");
+			xCompatibleSupply = xmlMDS_Doc.createElementWithTextValue('dateCreated', gAggSupply.printer_supplies.sys_created_on.toString());
+			xCompatibleSupply = xmlMDS_Doc.createElementWithTextValue('lastUpdated',gAggSupply.printer_supplies.sys_updated_on.toString());
+			xCompatibleSupply = xmlMDS_Doc.createElementWithTextValue('yield',gAggSupply.printer_supplies.yield.toString());
+			xCompatibleSupply = xmlMDS_Doc.createElementWithTextValue('yieldMeasure',gAggSupply.printer_supplies.yield_measure.toString());
+			
+			//Supply_ConsumableIDs
+			var xConsumableIds = xmlMDS_Doc.createElement('consumableIds');
+			var gSupplyConsumableIDs = new GlideAggregate('x_77927_master_dat_m2m_printer_supp_printer_cons');
+			gSupplyConsumableIDs.addQuery('printer_supplies', gAggSupply.printer_supplies.toString());
+			gSupplyConsumableIDs.addAggregate('COUNT', 'printer_consumables');
+			gSupplyConsumableIDs.groupBy('printer_consumables');
+			gSupplyConsumableIDs.query();			
+			while (gSupplyConsumableIDs.next()) {
+			xmlMDS_Doc.setCurrentElement(xConsumableIds);
+			xmlMDS_Doc.createElementWithTextValue('consumableId',gSupplyConsumableIDs.printer_consumables.consumable_id.toString());	
+			}
+				
+			}
+			
+		}
+		
+		gs.info(xmlMDS_Doc);
+		return xmlMDS_Doc.toString();
+		
+	},
+	getDeviceMasterData: function(columnName, columnValue) {
+	var mds = {deviceMasterData:{deviceType:{manufacturer:{}, collectProtocol:{}, technologyType:{}, printCapabilityType:{}}, consumables:{consumable:[]}, products:[]}};
+		
+		//-----Printer
+		var gPrinter = new GlideRecord('x_77927_master_dat_printer_types');
+        gPrinter.addQuery('printer_type_id', columnValue);
+        gPrinter.query();	
+		
+		if (gPrinter.next()) {
+			mds.deviceMasterData.deviceType._id = gPrinter.printer_type_id.getDisplayValue();
+			mds.deviceMasterData.deviceType._name = gPrinter.name.getDisplayValue();
+			mds.deviceMasterData.deviceType.manufacturer._id = gPrinter.manufacturer.x_77927_master_dat_id.toString();
+			mds.deviceMasterData.deviceType.manufacturer._name = gPrinter.manufacturer.getDisplayValue();
+			mds.deviceMasterData.deviceType.collectProtocol._id = gPrinter.collect_protocol_type.toString();
+			mds.deviceMasterData.deviceType.collectProtocol._name = gPrinter.collect_protocol_type.getDisplayValue();
+			mds.deviceMasterData.deviceType.technologyType._id = gPrinter.technology_type.toString();
+			mds.deviceMasterData.deviceType.technologyType._name = gPrinter.technology_type.getDisplayValue();
+			mds.deviceMasterData.deviceType.printCapabilityType._id = gPrinter.print_capability_type.toString();
+			mds.deviceMasterData.deviceType.printCapabilityType._name = gPrinter.print_capability_type.getDisplayValue();
+			mds.deviceMasterData.deviceType.dataSource = "ITSM";
+			mds.deviceMasterData.deviceType.dateCreated = gPrinter.sys_created_on.toString();
+			mds.deviceMasterData.deviceType.lastUpdated = gPrinter.sys_updated_on.toString();
+		} else {
+			return;
+		}
+		
+		//-----Consumable
+		var pConsumableIDs = [];
+		var gAggConsumable = new GlideRecord('x_77927_master_dat_m2m_printer_cons_printer_type');	
+		gAggConsumable.addQuery('printer_types',gPrinter.sys_id.toString());
+		//gAggConsumable.addAggregate('COUNT', 'printer_consumables');
+		//gAggConsumable.groupBy('printer_consumables');
+		gAggConsumable.query();
+		
+		while (gAggConsumable.next()) {
+		var con = {consumableType:{}, colors:{}};
+		con._id = gAggConsumable.printer_consumables.consumable_id.toString();
+		con._name = gAggConsumable.printer_consumables.consumable_name.getDisplayValue();
+		con.consumableType._id = gAggConsumable.printer_consumables.consumable_type.toString();
+		con.consumableType._name = gAggConsumable.printer_consumables.consumable_type.getDisplayValue();
+				//Colors
+				var gchoice = new GlideRecord('sys_choice','colors');
+				gchoice.addQuery('name','x_77927_master_dat_printer_consumables'); 
+				gchoice.addQuery('element','colors');
+				gchoice.addQuery('value',gAggConsumable.printer_consumables.colors.toString());
+				gchoice.query();	
+				while(gchoice.next()) {
+				var clr  = {color:{}};
+				clr.color._id = gchoice.value;
+				clr.color._name = gchoice.label;
+				clr.color._order = gchoice.sequence;
+				con.colors = clr;
+				}
+		con.fulfillmentNeedSourceId = gAggConsumable.fulfillment_need_source_id.getDisplayValue();
+        con.consumableOrderTypeId = gAggConsumable.consumable_order_type_id.toString();
+        con.monoEquivalentForColor = gAggConsumable.mono_equivalent_for_color.getDisplayValue();
+        con.suppressionPrintTotal = gAggConsumable.suppression_print_total.getDisplayValue();
+        con.dataSource = "ITSM";
+        con.dateCreated = gAggConsumable.printer_consumables.sys_created_on.toString();
+        con.lastUpdated = gAggConsumable.printer_consumables.sys_updated_on.toString();
+		mds.deviceMasterData.consumables.consumable.push(con);
+		pConsumableIDs.push(gAggConsumable.printer_consumables.toString());
+		}
+
+		//Supply
+		var pSuppliesIDs = [];
+		var gAggConsumableSupply = new GlideAggregate('x_77927_master_dat_m2m_printer_supp_printer_cons');	
+		gAggConsumableSupply.addQuery('printer_consumablesIN'+ pConsumableIDs);
+		gAggConsumableSupply.addAggregate('COUNT', 'printer_supplies');
+		gAggConsumableSupply.groupBy('printer_supplies');
+		gAggConsumableSupply.query();
+		while (gAggConsumableSupply.next()) {
+		pSuppliesIDs.push(gAggConsumableSupply.printer_supplies.toString());
+		}
+		
+		//Model
+		var gModel = new GlideAggregate('x_77927_master_dat_m2m_printer_supp_printer_mode');	
+		gModel.addQuery('printer_suppliesIN'+ pSuppliesIDs);
+		gModel.addAggregate('COUNT', 'printer_models');
+		gModel.groupBy('printer_models');
+		gModel.query();
+		while (gModel.next()) {
+		var mod ={product:{compatibleSupplies:{}}};
+		mod.product._id = gModel.printer_models.product_id.toString();
+		mod.product.manufacturerProductNumber = gModel.printer_models.model_number.getDisplayValue();
+		mod.product.sapProductNumber = gModel.printer_models.sap_model_number.getDisplayValue();
+		mod.product.productModelName = gModel.printer_models.name.getDisplayValue();
+		mod.product.dataSource = "ITSM";
+		mod.product.dateCreated = gModel.printer_models.sys_created_on.toString();
+		mod.product.lastUpdated = gModel.printer_models.sys_updated_on.toString();
+			
+			var gAggSupply = new GlideAggregate('x_77927_master_dat_m2m_printer_supp_printer_mode');	
+			gAggSupply.addQuery('printer_models', gModel.printer_models.toString());
+			gAggSupply.addAggregate('COUNT', 'printer_supplies');
+			gAggSupply.groupBy('printer_supplies');
+			gAggSupply.query();
+			var mods =[];
+			while (gAggSupply.next()) {
+			var ms = {compatibleSupply :{consumableIds:{}}};
+			ms.compatibleSupply._id = gAggSupply.printer_supplies.supply_id.toString();
+			ms.compatibleSupply.manufacturerPartNumber = gAggSupply.printer_supplies.model_number.toString();
+			ms.compatibleSupply.sapPartNumber = gAggSupply.printer_supplies.sap_model_number.toString();
+			ms.compatibleSupply.supplyDescription = gAggSupply.printer_supplies.name.toString();
+			ms.compatibleSupply.yield = gAggSupply.printer_supplies.yield.toString();
+			ms.compatibleSupply.yieldMeasure = gAggSupply.printer_supplies.yield_measure.toString();
+			ms.compatibleSupply.dataSource = "ITSM";
+			ms.compatibleSupply.dateCreated = gAggSupply.printer_supplies.sys_created_on.toString();
+			ms.compatibleSupply.lastUpdated = gAggSupply.printer_supplies.sys_updated_on.toString();
+				//Supply_ConsumableIDs
+				var gSupplyConsumableIDs = new GlideAggregate('x_77927_master_dat_m2m_printer_supp_printer_cons');
+				gSupplyConsumableIDs.addQuery('printer_supplies', gAggSupply.printer_supplies.toString());
+				gSupplyConsumableIDs.addAggregate('COUNT', 'printer_consumables');
+				gSupplyConsumableIDs.groupBy('printer_consumables');
+				gSupplyConsumableIDs.query();	
+				var ci =[];
+				while (gSupplyConsumableIDs.next()) {
+				var cid ={};
+					cid.consumableId = gSupplyConsumableIDs.printer_consumables.consumable_id.toString();
+					ci.push(cid);
+				}
+				ms.compatibleSupply.consumableIds= ci;
+			mods.push(ms);
+			}
+			mod.product.compatibleSupplies = mods;
+		mds.deviceMasterData.products.push(mod);
+			
+		}
+
+		return mds;
+	},
+    type: 'DeviceMasterData'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-24 09:47:34</sys_created_on>
+        <sys_id>3cc8f6392f90301069b243e72799b6c8</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>DeviceMasterData</sys_name>
+        <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
+        <sys_update_name>sys_script_include_3cc8f6392f90301069b243e72799b6c8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-24 10:04:20</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -19,16 +19,15 @@
 	
 	if(requestContext != 'application/json'){
 		payload = dmd.getDeviceMasterDataXML('printer_type_id',printerTypeId);
-
 		response.setContentType('application/xml');
+		var writer=response.getStreamWriter();
+        writer.writeString(payload);
 	} else {
 		payload = dmd.getDeviceMasterData('printer_type_id',printerTypeId);
-
 		response.setContentType('application/JSON');
+		var resWriter = response.getStreamWriter();
+		resWriter.writeString(JSON.stringify(payload));
 	}
-	
-	var writer = response.getStreamWriter();
-	writer.writeString(payload);
 	
 })(request, response);]]></operation_script>
         <operation_uri>/api/x_77927_master_dat/v1/devicemasterdata/{PrinterTypeID}</operation_uri>
@@ -44,14 +43,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-05-24 06:55:40</sys_created_on>
         <sys_id>bb6192bd2f10301069b243e72799b6df</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>GetDeviceMasterData</sys_name>
         <sys_package display_value="Master Data Service" source="x_77927_master_dat">f1c6b4a62f4b2010b3352aa62799b61b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Master Data Service">f1c6b4a62f4b2010b3352aa62799b61b</sys_scope>
         <sys_update_name>sys_ws_operation_bb6192bd2f10301069b243e72799b6df</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-05-24 10:02:56</sys_updated_on>
+        <sys_updated_on>2021-05-25 06:17:51</sys_updated_on>
         <web_service_definition display_value="DeviceMasterData">67d01e7d2f10301069b243e72799b653</web_service_definition>
         <web_service_version display_value="v1">8551167d2f10301069b243e72799b6b6</web_service_version>
     </sys_ws_operation>
